@@ -1,7 +1,8 @@
 import React from "react";
 
 const GreenBtn = (props) => {
-  const { btntext } = props;
+  // onClick 추가
+  const { btntext, onClick } = props;
   const btnStyle = {
     background: "#0A5F6F",
     fontSize: "15px",
@@ -11,7 +12,12 @@ const GreenBtn = (props) => {
     width: "120px",
     height: "36px",
   };
-  return <button style={btnStyle}>{btntext}</button>;
+  return (
+    // onClick 추가
+    <button style={btnStyle} onClick={onClick}>
+      {btntext}
+    </button>
+  );
 };
 
 export default GreenBtn;
